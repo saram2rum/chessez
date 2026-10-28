@@ -15,7 +15,7 @@
 | `data/grid_105.csv` | 노드 수 ×1.05 격자 측정값 (참고용, 원래 격자와 81%가 같은 값) |
 | `data/grid_orig_sub.csv` | 원래 격자 재측정 600 FEN × 10 (깊이 기록, 재현성 확인) |
 | `data/trace_500.jsonl.gz` | 180,000 nodes 탐색의 반복 심화 깊이별 평가치 (논문 5.7절) |
-| `data/ground_truth_B.csv` | 기준값 B: depth 20, Threads=1, Hash=16MB, 국면마다 해시 초기화로 다시 산출 (논문 4.2절, 5.3절) |
+| `data/ground_truth_B.csv` | 기준값 B: depth 20, Threads=1, Hash=16MB, 국면마다 해시 초기화로 다시 산출. 기준값 잡음 크기 확인용이며, 측정 탐색의 연장이라 정책 평가에는 쓰지 않음 (논문 4.2절, 5.3절, `scripts/check_prefix.py`) |
 | `data/results.json`, `data/tables.json`, `data/gtb.json`, `data/rev7.json` | 논문에 들어간 수치와 표 |
 
 ## 재현 방법
@@ -27,7 +27,7 @@
 
 엔진 설정은 Threads=1, Hash=16MB, 요청마다 해시 초기화(`ucinewgame`), 탐색량은 `nodes = 360 × t`입니다. 이 설정에서는 실행하는 컴퓨터와 관계없이 같은 평가치가 나옵니다(600 FEN × 10 예산, 6,000회 일치 확인).
 
-원래 기준값(A, `paper_legacy/data/mixed_workload_pool.csv`)은 해시를 비우지 않고 4개 프로세스로 산출하여 같은 값을 재현할 수 없습니다. 기준값 B는 재현됩니다.
+원래 기준값(A, `paper_legacy/data/mixed_workload_pool.csv`)은 해시를 비우지 않고 4개 프로세스로 산출하여 같은 값을 재현할 수 없습니다. 논문의 모든 정책 평가는 기준값 A를 사용합니다. 기준값 B는 재현되지만 측정과 같은 탐색의 연장입니다.
 
 ## 주의
 

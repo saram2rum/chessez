@@ -10,7 +10,6 @@ fig,ax=plt.subplots(figsize=(7.2,4.2),dpi=220)
 INK='#1f2937'; MUTED='#6b7280'; LINE='#2563eb'
 ax.plot(T,wu,color=LINE,lw=2,marker='o',ms=5,zorder=3,label='균일 정책 wu(t)')
 pts=[(245.7,1.8355,'S/M/L 휴리스틱','s',(320,1.98)),
-     (243,float(R['PERM_MEAN']),'무작위 배분 기준선','v',(320,2.13)),
      (243,1.1185,'이론적 상한 (best_t)','D',(320,1.12))]
 for x,y,lab,mk,(tx,ty) in pts:
     ax.scatter([x],[y],marker=mk,s=46,color=INK,zorder=4,edgecolor='white',linewidth=1.2)

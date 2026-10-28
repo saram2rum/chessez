@@ -7,7 +7,7 @@ n = same = 0
 for line in gzip.open('data/trace_500.jsonl.gz', 'rt'):
     d = json.loads(line); tr = d['trace']; b = B[d['fen']]
     t20 = [x for x in tr if x[0] == 20]
-    if not t20 or not any(x[0] > 20 for x in tr): continue
+    if not t20 or t20[-1][1] > 180000: continue  # depth 20을 180,000 nodes 안에 마친 국면
     n += 1; t = t20[-1]
     same += (t[1] == int(b['nodes']) and t[2] == b['type'] and str(t[3]) == b['value'])
 print(f'{same}/{n} identical')

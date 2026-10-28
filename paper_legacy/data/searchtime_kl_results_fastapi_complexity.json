@@ -1,0 +1,10 @@
+{
+  "mode": "complexity",
+  "mean_kl_nats": 0.003977579320083708,
+  "n": 2927,
+  "moveTimeByBucket": {
+    "S": 100,
+    "M": 250,
+    "L": 400
+  }
+}

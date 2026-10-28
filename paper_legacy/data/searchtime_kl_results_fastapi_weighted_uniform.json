@@ -1,0 +1,13 @@
+{
+  "mode": "weighted_uniform",
+  "weightedBaselineMoveTimeMs": 245.6952511103519,
+  "searchTimeMsUsed": 246,
+  "uniformMsOverride": null,
+  "mean_kl_nats": 0.003915568637924871,
+  "n": 2927,
+  "moveTimeByBucket": {
+    "S": 100,
+    "M": 250,
+    "L": 400
+  }
+}

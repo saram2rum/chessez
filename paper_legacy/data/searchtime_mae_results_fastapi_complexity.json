@@ -1,0 +1,10 @@
+{
+  "mode": "complexity",
+  "mae_pct_points": 1.8475650273836728,
+  "n": 2927,
+  "moveTimeByBucket": {
+    "S": 100,
+    "M": 250,
+    "L": 400
+  }
+}

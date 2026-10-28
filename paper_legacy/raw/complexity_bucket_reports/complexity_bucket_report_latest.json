@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-04-28T22:06:07",
+  "sourceCsv": "/Users/raon/Desktop/chessez/mixed_workload_pool.csv",
+  "analysisConfig": {
+    "sample": null,
+    "exampleLimit": 0
+  },
+  "heuristicConfig": {
+    "evalTimeByBucket": {
+      "S": 100,
+      "M": 250,
+      "L": 400
+    },
+    "evalNodesByBucket": {
+      "S": 36000,
+      "M": 90000,
+      "L": 144000
+    },
+    "nodesPerMs": 360,
+    "algorithm": "cascade_s_ml_v2",
+    "endgame": {
+      "materialThreshold": 24,
+      "pieceValues": {
+        "queen": 9,
+        "rook": 5,
+        "bishop": 3,
+        "knight": 3
+      }
+    },
+    "imbalance": {
+      "threshold": 9,
+      "rank6PawnValue": 3,
+      "rank7PawnValue": 5
+    },
+    "lBucket": {
+      "mutualForcingThreshold": 5,
+      "requireBothQueens": true
+    }
+  },
+  "totalFens": 2927,
+  "bucketCounts": {
+    "S": 167,
+    "M": 2677,
+    "L": 83
+  },
+  "bucketRatios": {
+    "S": 0.05705500512470106,
+    "M": 0.9145883156815853,
+    "L": 0.0283566791937137
+  },
+  "weightedBaselineMoveTimeMs": 245.6952511103519,
+  "reasonCounts": {
+    "default": 2677,
+    "mutual_forcing_with_queens": 83,
+    "quiet_winning_endgame": 167
+  },
+  "reasonCountsByBucket": {
+    "M": {
+      "default": 2677
+    },
+    "L": {
+      "mutual_forcing_with_queens": 83
+    },
+    "S": {
+      "quiet_winning_endgame": 167
+    }
+  },
+  "moveTimeByBucket": {
+    "S": 100,
+    "M": 250,
+    "L": 400
+  }
+}

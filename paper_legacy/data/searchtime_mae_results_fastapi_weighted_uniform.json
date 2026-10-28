@@ -1,0 +1,13 @@
+{
+  "mode": "weighted_uniform",
+  "weightedBaselineMoveTimeMs": 245.6952511103519,
+  "searchTimeMsUsed": 246,
+  "uniformMsOverride": null,
+  "mae_pct_points": 1.8543788213582155,
+  "n": 2927,
+  "moveTimeByBucket": {
+    "S": 100,
+    "M": 250,
+    "L": 400
+  }
+}

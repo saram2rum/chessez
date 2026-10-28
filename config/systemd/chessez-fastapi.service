@@ -1,0 +1,20 @@
+[Unit]
+Description=Chessez FastAPI application
+After=network-online.target redis-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/chessez/current
+EnvironmentFile=/etc/chessez/chessez-fastapi.env
+ExecStart=/opt/chessez/shared/venv/bin/uvicorn main:app --host 127.0.0.1 --port 8010
+Restart=always
+RestartSec=3
+StandardOutput=append:/opt/chessez/shared/logs/fastapi.log
+StandardError=append:/opt/chessez/shared/logs/fastapi.log
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
